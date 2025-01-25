@@ -1,0 +1,11 @@
+CREATE DATABASE forum;
+
+USE forum;
+
+CREATE TABLE bejegy (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    title VARCHAR(200) NOT NULL,
+    content TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

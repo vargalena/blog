@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Megakadályozza a vízszintes görgetősávot */
+}
+
+
+#wrap {
+    position: relative; /* A wrap div-et relatív pozícióba helyezzük, hogy a gyermek elemeket relatíve tudjuk pozícionálni */
+    text-align: center;
+    
+}
+
+#header {
+    width: 100%; /* A kép kitölti a teljes szélességet */
+    height: 350px; /* A kép magassága (állítsd be a kívánt értékre) */
+}
+
+#mainTitle {
+    position: absolute; /* A cim div-et abszolút pozícióba helyezzük, hogy a wrap div-hez képest tudjuk pozícionálni */
+    top: 200px; /* A kép aljától 20 pixelre helyezzük */
+    left: 50%; /* A kép közepébe helyezzük */
+    transform: translateX(-50%); 
+    text-align: center;
+    color: rgb(255, 255, 255); /* A szöveg színe */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+    font-size: 40px;
+
+}
+
+.picFrame {
+    position: relative;
+    width: 80%; /* A keret szélessége (módosítható) */
+    margin: 40px auto;
+    background-color: #a6def36c;
+    padding: 80px 30px 20px;
+    display: flex; /* A képeket egy sorba rendezi */
+    justify-content: space-around; /* A képek egyenlő távolságra lesznek egymástól */
+    border-radius: 10px;
+  }
+  
+.picFrame img {
+    max-width: 30%; /* A képek maximális szélessége (módosítható) */
+    border-radius: 10px;
+}
+
+
+
+.texts {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%; /* Teljes szélességű sáv */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Árnyék, hogy olvashatóbb legyen */
+    background-color: #919191aa; 
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px; 
+    z-index: 1;
+}
+
+#text2 {  
+    display: block; /* Alapblokk elem */
+    margin: 0 auto; /* Automatikus vízszintes igazítás, az előző tartalom után */
+    width: 40%; /* Szöveg sáv szélessége */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Árnyék */
+    background-color: #919191aa;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 20px; /* Kényelmes margó a szöveg körül */
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+}
+
+#post {
+    margin: 0 auto;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Árnyék, hogy olvashatóbb legyen */
+    background-color: #919191aa;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.container .picFrame {
+    width: 60%;
+}
+/* Formázás az űrlaphoz */
+form {
+    text-align: center;
+    background-image: url(img/form_hatter_uj.jpg);
+    background-size: contain;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea, form button{
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+  }
+  
+
+#username {
+    margin-top: 30px;
+}
+
+#content {
+    margin-top: -5px;
+}
+
+
+form button {
+    margin: 30px 0;
+    width: 40%;
+    background-color: #919191db;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+form button:hover {
+    background-color: #747373e8;
+}
+
+/* Bejegyzések stílusa */
+#posts {
+    margin-top: 40px;
+    width: 80%;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word; /* A hosszú szavakat megtöri */
+    padding: 10px; /* Jobb olvashatóság érdekében */
+    
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #a6def36c, #747373e8); /* rózsaszínból narancssárgába */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.post h3 {
+    font-size: 25px;
+    color: #000000;
+}
+
+
+.post small {
+    font-size: 14px;
+    color: #777;
+}
+
+.post p {
+    font-size: 16px;
+    color: #000000;
+}
+
+#more_button {
+    background: none;
+    border: none;
+    color: #0000009a; 
+    text-decoration: underline;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#more_button:hover {
+    color: #020202;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+
+    #posts {
+        width: 90%;
+    }
+}

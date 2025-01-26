@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Bejegyzések listázása
+  
     function fetchPosts() {
         fetch('/blog/api.php') 
             .then(response => response.json())
@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const postsDiv = document.getElementById('posts');
                 postsDiv.innerHTML = '';
 
-                posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)); // Csökkenő sorrend
+                posts.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)); 
                 
                 posts.forEach(post => {
                     const postElement = document.createElement('div');
-                    postElement.classList.add('post'); // Post stílus hozzáadása
+                    postElement.classList.add('post'); 
 
                     postElement.innerHTML = `
                         <h3>${post.title}</h3>
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Hiba történt a bejegyzések betöltésekor:', error));
     }
 
-    // Bejegyzés beküldése
+ 
     document.getElementById('postForm').addEventListener('submit', function(event) {
         event.preventDefault();
         
@@ -41,19 +41,19 @@ document.addEventListener('DOMContentLoaded', function() {
             body: JSON.stringify({ username, title, content })
         })
             .then(() => {
-                fetchPosts(); // Újra tölti a bejegyzéseket
-                this.reset(); // Űrlap kiürítése
+                fetchPosts(); 
+                this.reset(); 
             });
     }); 
 
-    // Bejegyzés teljes tartalmának megjelenítése
+  
     window.showMore = function(postId) {
     fetch('api.php?id=' + postId)
         .then(response => response.json())
         .then(post => {
             const contentElement = document.getElementById('content-' + postId);
             if (post.content) {
-                contentElement.innerHTML = post.content; // A teljes tartalom megjelenítése
+                contentElement.innerHTML = post.content; 
             } else {
                 console.error('Hiba: a bejegyzés tartalma üres vagy nem található!');
             }
@@ -61,6 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Hiba történt a bejegyzés teljes tartalmának betöltésekor:', error));
     };
 
-    // Alkalmazás indítása
+
     fetchPosts();
 });

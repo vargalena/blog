@@ -4,19 +4,17 @@ include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['id'])) {
-        // Egy adott bejegyzés lekérdezése ID alapján
         $id = intval($_GET['id']);
         $sql = "SELECT * FROM bejegy WHERE id = $id";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             $post = $result->fetch_assoc();
-            echo json_encode($post); // Egy adott bejegyzés JSON formátumban
+            echo json_encode($post); 
         } else {
             echo json_encode(["error" => "A bejegyzés nem található."]);
         }
     } else {
-        // Az összes bejegyzés lekérdezése
         $sql = "SELECT * FROM bejegy";
         $result = $conn->query($sql);
 

@@ -3,28 +3,28 @@ body {
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Megakadályozza a vízszintes görgetősávot */
+    overflow-x: hidden; 
 }
 
 
 #wrap {
-    position: relative; /* A wrap div-et relatív pozícióba helyezzük, hogy a gyermek elemeket relatíve tudjuk pozícionálni */
+    position: relative; 
     text-align: center;
     
 }
 
 #header {
-    width: 100%; /* A kép kitölti a teljes szélességet */
-    height: 350px; /* A kép magassága (állítsd be a kívánt értékre) */
+    width: 100%; 
+    height: 350px; 
 }
 
 #mainTitle {
-    position: absolute; /* A cim div-et abszolút pozícióba helyezzük, hogy a wrap div-hez képest tudjuk pozícionálni */
-    top: 200px; /* A kép aljától 20 pixelre helyezzük */
-    left: 50%; /* A kép közepébe helyezzük */
+    position: absolute; 
+    top: 200px; 
+    left: 50%; 
     transform: translateX(-50%); 
     text-align: center;
-    color: rgb(255, 255, 255); /* A szöveg színe */
+    color: rgb(255, 255, 255); 
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
     font-size: 40px;
 
@@ -32,17 +32,17 @@ body {
 
 .picFrame {
     position: relative;
-    width: 80%; /* A keret szélessége (módosítható) */
+    width: 80%; 
     margin: 40px auto;
     background-color: #a6def36c;
     padding: 80px 30px 20px;
-    display: flex; /* A képeket egy sorba rendezi */
-    justify-content: space-around; /* A képek egyenlő távolságra lesznek egymástól */
+    display: flex; 
+    justify-content: space-around; 
     border-radius: 10px;
   }
   
 .picFrame img {
-    max-width: 30%; /* A képek maximális szélessége (módosítható) */
+    max-width: 30%; 
     border-radius: 10px;
 }
 
@@ -53,9 +53,9 @@ body {
     top: 12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%; /* Teljes szélességű sáv */
+    width: 40%; 
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Árnyék, hogy olvashatóbb legyen */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     background-color: #919191aa; 
     font-size: 30px;
     text-align: center;
@@ -66,15 +66,15 @@ body {
 }
 
 #text2 {  
-    display: block; /* Alapblokk elem */
-    margin: 0 auto; /* Automatikus vízszintes igazítás, az előző tartalom után */
-    width: 40%; /* Szöveg sáv szélessége */
+    display: block; 
+    margin: 0 auto; 
+    width: 40%; 
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Árnyék */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     background-color: #919191aa;
     font-size: 30px;
     text-align: center;
-    padding: 10px 20px; /* Kényelmes margó a szöveg körül */
+    padding: 10px 20px; 
     font-family: 'Montserrat', sans-serif;
     border-radius: 10px;
 }
@@ -82,7 +82,7 @@ body {
 #post {
     margin: 0 auto;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Árnyék, hogy olvashatóbb legyen */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     background-color: #919191aa;
     font-size: 30px;
     text-align: center;
@@ -96,7 +96,8 @@ body {
 .container .picFrame {
     width: 60%;
 }
-/* Formázás az űrlaphoz */
+
+
 form {
     text-align: center;
     background-image: url(img/form_hatter_uj.jpg);
@@ -146,15 +147,15 @@ form button:hover {
     background-color: #747373e8;
 }
 
-/* Bejegyzések stílusa */
+
 #posts {
     margin-top: 40px;
     width: 80%;
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
-    word-wrap: break-word; /* A hosszú szavakat megtöri */
-    padding: 10px; /* Jobb olvashatóság érdekében */
+    word-wrap: break-word; 
+    padding: 10px; 
     
 }
 
@@ -164,7 +165,7 @@ form button:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #a6def36c, #747373e8); /* rózsaszínból narancssárgába */
+    background: linear-gradient(to right, #a6def36c, #747373e8);
     border: none;
     padding: 10px 20px;
     color: white;
@@ -202,8 +203,16 @@ form button:hover {
     color: #020202;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+
+@media (max-width: 1000px) {
+    #mainTitle {
+        font-size: 25px;
+    }
+
+    .texts, #text2 {
+        font-size: 20px;
+    }
+
     form {
         width: 90%;
     }
